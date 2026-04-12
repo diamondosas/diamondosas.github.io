@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClipSync - Synchronize Your Clipboard</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--card-bg);
+            border-bottom: 1px solid #eaeaea;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--accent-color);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .downloads-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #005bb5;
+        }
+        .features-list {
+            margin-top: 40px;
+        }
+        .features-list li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        #loading {
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/">← Back to Portfolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>ClipSync</h1>
+                <p>Synchronize your clipboard across every device on your local network. Built for developers and power users who value flow state over file transfers.</p>
+
+                <div class="stats" id="github-stats">
+                    <span id="stars-count">⭐ Loading stars...</span>
+                    <span id="forks-count">🍴 Loading forks...</span>
+                </div>
+
+                <div class="downloads-section">
+                    <h2>Download Latest Release (<span id="version-label">...</span>)</h2>
+                    <p id="loading-releases">Fetching downloads...</p>
+                    <div id="download-buttons" style="display: none;">
+                        <!-- Buttons will be injected here via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container features-list">
+            <h2>Why ClipSync?</h2>
+            <ul>
+                <li><strong>🔌 Zero Configuration:</strong> Your devices find each other instantly. No manual IP entry. No handshake. Just sync.</li>
+                <li><strong>🔒 True Privacy:</strong> Your clipboard data never leaves your local network. It moves directly from device A to device B.</li>
+                <li><strong>⚡ Native Performance:</strong> Incredibly lightweight (~5MB RAM, 0.1% CPU). It sits quietly in the background and does its job.</li>
+            </ul>
+
+            <h2>Open Source</h2>
+            <p>ClipSync is fully open source. Check out the code, contribute, or report issues on our <a href="https://github.com/diamondosas/ClipSync" target="_blank">GitHub Repository</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Diamond Osazuwa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="clipsync.js"></script>
+</body>
+</html>
